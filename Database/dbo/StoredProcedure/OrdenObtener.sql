@@ -12,7 +12,7 @@ SET NOCOUNT ON
 		
 		P.NombreProducto
 	FROM Orden O
-	INNER JOIN Producto P
+	LEFT JOIN Producto P
 	ON O.IdProducto = P.IdProducto
 	WHERE 
 	(@IdOrden IS NULL OR IdOrden = @IdOrden)
