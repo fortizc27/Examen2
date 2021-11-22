@@ -35,7 +35,9 @@
                                 <td>
                                     <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdOrden"><i class='bx bx-edit-alt'></i></a>
 
-                                    <button type="button" class="btn btn-danger" onclick="OrdenGrid.OnClickEliminar(@item.IdOrden)"><i class='bx bx-trash'></i></button>
+                                    <button type="button" class="btn btn-danger" onclick="OrdenGrid.OnClickEli(@item.IdOrden)">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
                                 </td>
                             </tr>
                             }
