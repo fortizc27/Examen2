@@ -9,18 +9,19 @@ using WBL;
 
 namespace WebApp.Pages.Orden
 {
-    public class EditModel : PageModel
+    public class Edit2Model : PageModel
     {
         private readonly IOrdenService OrdenService;
         private readonly IProductoService productoService;
 
-        public EditModel(IOrdenService OrdenService, IProductoService productoService)
+        public Edit2Model(IOrdenService OrdenService, IProductoService productoService)
         {
             this.OrdenService = OrdenService;
             this.productoService = productoService;
         }
 
         [BindProperty]
+        [FromBody]
         public OrdenEntity Entity { get; set; } = new OrdenEntity();
         public IEnumerable<ProductoEntity> Lista = new List<ProductoEntity>();
 
@@ -67,6 +68,7 @@ namespace WebApp.Pages.Orden
             }
             catch (Exception ex)
             {
+
                 return new JsonResult(new DBEntity { CodeError = ex.HResult, MsgError = ex.Message });
             }
         }
