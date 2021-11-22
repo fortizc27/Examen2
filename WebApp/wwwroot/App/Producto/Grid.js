@@ -2,7 +2,7 @@
 var ProductoGrid;
 (function (ProductoGrid) {
     function OnClickEliminar(id) {
-        ComfirmAlert("Desea eliminar el registro?", "Eliminar", "warning", "#3085d6", "#d33").then(function (result) {
+        ComfirmAlert("Desea eliminar el registro?", "Eliminar", "warning", "#3085d6", "d33").then(function (result) {
             if (result.isConfirmed) {
                 Loading.fire("Eliminando...");
                 App.AxiosProvider.ProductoEliminar(id).then(function (data) {
