@@ -35,7 +35,7 @@ namespace WebApp.Pages.Orden
             }
         }
 
-        public async Task<IActionResult> OnEliminar(int id)
+        public async Task<IActionResult> OnDeleteEliminar(int id)
         {
             try
             {

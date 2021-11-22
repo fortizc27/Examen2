@@ -1,7 +1,7 @@
 "use strict";
 var OrdenGrid;
 (function (OrdenGrid) {
-    function OnClickEli(id) {
+    function OnClickEliminar(id) {
         ComfirmAlert("Desea eliminar el registro?", "Eliminar", "warning", "#3085d6", "d33").then(function (result) {
             if (result.isConfirmed) {
                 Loading.fire("Eliminando...");
@@ -17,7 +17,7 @@ var OrdenGrid;
             }
         });
     }
-    OrdenGrid.OnClickEli = OnClickEli;
+    OrdenGrid.OnClickEliminar = OnClickEliminar;
     $("#GridView").DataTable();
 })(OrdenGrid || (OrdenGrid = {}));
 //# sourceMappingURL=Grid.js.map
